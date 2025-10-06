@@ -30,16 +30,13 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
             {navItems.map((item) => (
               <button
                 key={item.id}
-                onClick={item.id === 'home' ? () => onNavigate('home') : undefined}
-                disabled={item.id !== 'home'}
-                title={item.id !== 'home' ? 'Under construction' : undefined}
+                onClick={() => onNavigate(item.id)}
                 className={`px-3 py-2 rounded-lg transition-all duration-200 ${
-                  item.id !== 'home'
-                    ? 'text-gray-400 cursor-not-allowed'
-                    : currentPage === 'home'
-                      ? 'text-gray-900 bg-gray-100'
-                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                  currentPage === item.id
+                    ? 'text-gray-900 bg-gray-100'
+                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
                 }`}
+                title={item.id === 'home' ? undefined : 'Under construction'}
               >
                 {item.label}
               </button>

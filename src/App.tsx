@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Homepage } from './components/Homepage';
 import { Navigation } from './components/Navigation';
+import { UnderConstruction } from './under_construction/UnderConstruction';
 
 type Page = 'home' | 'experiences' | 'projects' | 'awards' | 'hobbies' | 'blog' | 'contact';
 
@@ -8,7 +9,19 @@ export default function App() {
   const [currentPage, setCurrentPage] = useState<Page>('home');
 
   const renderPage = () => {
-    return <Homepage onNavigate={setCurrentPage} />;
+    switch (currentPage) {
+      case 'home':
+        return <Homepage onNavigate={setCurrentPage} />;
+      case 'experiences':
+      case 'projects':
+      case 'awards':
+      case 'hobbies':
+      case 'blog':
+      case 'contact':
+        return <UnderConstruction title={currentPage.charAt(0).toUpperCase() + currentPage.slice(1)} />;
+      default:
+        return <Homepage onNavigate={setCurrentPage} />;
+    }
   };
 
   return (
