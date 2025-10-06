@@ -1,0 +1,40 @@
+# Build output
+/dist/
+
+# Vite cache
+.vite/
+node_modules/.vite/
+
+# Dependencies
+/node_modules/
+
+# Local env
+.env
+.env.*
+
+# TypeScript
+*.tsbuildinfo
+
+# Testing/coverage
+coverage/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Editor/IDE
+.vscode/
+.idea/
+.history/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Under-construction assets (ignore folder and file variants)
+src/underconstruction/
+src/UnderConstruction/
+src/UnderConstruction.tsx
