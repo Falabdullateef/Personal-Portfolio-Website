@@ -1,5 +1,5 @@
 
-  ## Personal Portfolio — Built By A Teen Figuring It Out 😅
+  ## Personal Portfolio (Still Figuring It Out 😅)
 
   After learning some React, I thought I had to design my own personal portfolio. This project will focus a lot on detailed UI/UX design then transforming it into real code. Basically: make it look clean, then make it actually work.
 
