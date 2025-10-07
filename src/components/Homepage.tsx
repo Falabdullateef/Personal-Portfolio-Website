@@ -1,5 +1,6 @@
 import profileImage from '../assets/SRSI.png';
-import { ArrowRight, Award, Code, Microscope, Trophy, Calendar, MessageCircle } from 'lucide-react';
+import React from 'react';
+import { ArrowRight, Code, Microscope, Trophy, Calendar, MessageCircle, Bike } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 
 interface HomepageProps {
@@ -62,7 +63,7 @@ export function Homepage({ onNavigate }: HomepageProps) {
       title: 'Experiences',
       description: 'Research internships, biology olympiad, and competitive programming',
       icon: Microscope,
-      highlight: '1300+ hours in Biology Olympiad'
+      highlight: '1400+ hours in Biology Olympiad'
     },
     {
       id: 'projects' as const,
@@ -82,7 +83,7 @@ export function Homepage({ onNavigate }: HomepageProps) {
       id: 'hobbies' as const,
       title: 'Hobbies',
       description: 'Cycling adventures and personal interests',
-      icon: Calendar,
+      icon: Bike,
       highlight: 'Mountain & road cycling'
     }
   ];
@@ -124,14 +125,11 @@ export function Homepage({ onNavigate }: HomepageProps) {
               <img
                 src={profileImage}
                 alt="Faisal in the lab"
-                className="w-80 h-80 object-cover rounded-2xl shadow-lg"
+                className="w-[22rem] h-[22rem] sm:w-[24rem] sm:h-[24rem] lg:w-[26rem] lg:h-[26rem] object-cover rounded-2xl shadow-lg"
+                sizes="(min-width: 1024px) 26rem, (min-width: 640px) 24rem, 22rem"
+                loading="eager"
+                decoding="async"
               />
-              <div className="absolute -bottom-4 -right-4 bg-white p-4 rounded-xl shadow-lg">
-                <div className="flex items-center gap-2">
-                  <Award className="w-5 h-5 text-yellow-500" />
-                  <span className="text-sm">4-year Biology Olympiad</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
